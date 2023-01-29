@@ -1,0 +1,2 @@
+# EducationJava
+Start of studies
