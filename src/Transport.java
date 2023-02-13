@@ -3,6 +3,8 @@ public class Transport {
     private int weight;
     private String color;
     private byte[] coordinate;
+
+    public Transport(){}
     public Transport(float speed, int weight, String color, byte[] coordinate){
 //        Join to DB
         System.out.println("Object created");
@@ -14,13 +16,13 @@ public class Transport {
         this.coordinate = coordinate;
         System.out.println(getValues());
     }
-    public void setValues(float speed, int weight, String color, byte[] coordinate){
+    protected void setValues(float speed, int weight, String color, byte[] coordinate){
         this.speed = speed;
         this.weight =weight;
         this.color = color;
         this.coordinate = coordinate;
     }
-    public String getValues() {
+    protected String getValues() {
         String info = "Object speed: " + speed + ". Object weight: " + weight + ". Object color: " + color + "." + "\n";
         String infoCoordinates = "Coordinates:\n";
         for (int i = 0; i < coordinate.length; i++) {
