@@ -3,13 +3,12 @@ public abstract class Transport {
     private int weight;
     private String color;
     private byte[] coordinate;
-
     public Transport(){}
     public Transport(float speed, int weight, String color, byte[] coordinate){
 //        Join to DB
         System.out.println("Object created");
         setValues(speed, weight, color, coordinate);
-        System.out.println(getValues());
+//        System.out.println(getValues());
     }
     public Transport(int weight, byte[] coordinate){
         this.weight =weight;
@@ -32,5 +31,23 @@ public abstract class Transport {
             infoCoordinates += coordinate[i] + "\n";
         }
         return info + infoCoordinates;
+    }
+    class Engine{
+        private boolean isReady;
+        private int km;
+        public void SetValues(boolean isReady, int km){
+            this.isReady = isReady;
+            this.km = km;
+        }
+        public void isReady(boolean isReady){
+            this.isReady = isReady;
+        }
+
+        public void info(){
+            if(isReady)
+                System.out.println("Двигатель испавен");
+            else
+                System.out.println("Двигатель не фурычит. Он проехал: "+ km+"км");
+        }
     }
 }
