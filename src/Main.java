@@ -1,24 +1,26 @@
+import db.DB;
+
 public class Main {
     public static void main(String[] args) {
-//        Car bmw = new Car(250.5f,2500,"Red",new byte[] {0 ,0 ,0});
-//        bmw.engine.SetValues(false,2000);
-//        bmw.engine.info();
-//
-//         Truck truck = new Truck(5600,new  byte[]{100, 0, 100}, false);
-//         truck.engine.SetValues(true,340);
-//         truck.engine.info();
-//         truck.setLoaded(true);
-//         truck.getLoaded();
+      DB db = new DB();
 
-         Car flyCar = new Car(450.5f,2500,"Red",new byte[] {0 ,0 ,0}){
-             @Override
-             public void moveObject(float speed) {
-                 super.moveObject(speed);
+      final int count = 35;
 
-                 this.engine.isReady(true);
-                 System.out.println("Машина летит, ёпт");
-             }
-         };
-         flyCar.moveObject(450);
+      Person obj1 = new Person();
+      Person obj2 = new Person();
+      Person obj3 = new Person();
+      Person obj4 = new Person();
+
+      Person.getCount();
+
+//      Person.count = 5;
+//      System.out.println(Person.count);
+    }
+    public static void ifo(){
+        System.out.println("Hello");
+    }
+
+    public static void ifo(String word){
+        System.out.println(word + "!");
     }
 }
